@@ -2,13 +2,11 @@ package ru.job4j.converter;
 
 public class Converter {
     public static float rubleToEuro(float volume) {
-        float result = volume / 70;
-        return result;
+        return volume / 70;
     }
 
     public static float rubleToDollar(float volume) {
-        float result = volume / 60;
-        return result;
+        return volume / 60;
     }
 
     public static void main(String[] args) {
@@ -16,5 +14,11 @@ public class Converter {
         float dollar = Converter.rubleToDollar(120);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("120 rubles are " + dollar + " dollar.");
+
+        float expected  = 2;
+        float input = 140;
+        float output = Converter.rubleToEuro(input);
+        boolean passed = output == expected;
+        System.out.println("140 rubles are 2. Test result : " + passed);
     }
 }
