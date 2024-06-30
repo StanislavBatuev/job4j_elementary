@@ -11,4 +11,15 @@ public class SkipNegative {
         }
         return arrey;
     }
+
+    public static int[][] skipWithForEach(int[][] arrey) {
+        for (int[] row : arrey) {
+            for (int cell = 0; cell < row.length; cell++) {
+                if (row[cell] < 0) {
+                    row[cell] = 0;
+                }
+            }
+        }
+        return arrey;
+    }
 }
